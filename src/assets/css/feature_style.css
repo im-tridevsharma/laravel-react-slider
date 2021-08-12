@@ -1,0 +1,75 @@
+/* ================================ Section CSS =============================== */
+.bg-01 {
+  padding: 3.125rem 0rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-01 .main-box {
+  position: relative;
+  display: block;
+  padding: 20px 15px;
+  box-shadow: 0px 5px 24px 6px rgba(0, 0, 0, 0.06);
+  border-bottom: #fd1b5b 3px solid;
+  text-align: center;
+}
+
+.bg-01 .main-box .content {
+  display: inline-block;
+  padding: 20px 15px;
+  position: relative;
+}
+
+.bg-01 .main-box .content i {
+  font-size: 30px;
+  color: #fd1b5b;
+  display: inline-block;
+  margin: 10px 0px;
+}
+
+.bg-01 .main-box .content img {
+  width: 50px;
+  display: inline-block;
+  margin: 10px 0px;
+}
+
+.bg-01 .main-box .content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222222;
+  text-transform: capitalize;
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.bg-01 .main-box .content p {
+  font-size: 1rem;
+  color: #373738;
+}
+
+.heading {
+  margin: 20px 0px;
+  text-align: left;
+  position: relative;
+  display: block;
+}
+
+.heading h2 {
+  font-size: 25px;
+  color: #222222;
+  line-height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.heading h2::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  left: 0;
+  top: 0;
+  height: 3px;
+  background-color: #fd1b5b;
+}

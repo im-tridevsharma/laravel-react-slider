@@ -1,0 +1,52 @@
+.abt-01 {
+  padding: 3.125rem 0;
+  background: #fd1b5b;
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.abt-01::before {
+  position: absolute;
+  content: "";
+  display: none;
+  background: #fff;
+  height: 9.375rem;
+  width: 9.375rem;
+  top: 0%;
+  left: 48%;
+  z-index: 1;
+  opacity: 0.1;
+  transform: translate3d(-23%, 17%, 0) rotate(-54deg);
+}
+
+.abt-01 .heading-wrapper {
+  position: relative;
+  margin: 1.25rem 0;
+  display: block;
+  text-align: center;
+  z-index: 8;
+}
+
+.abt-01 .heading-wrapper h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.625rem;
+  text-transform: uppercase;
+}
+
+.abt-01 .heading-wrapper ol li {
+  display: inline-block;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.abt-01 .heading-wrapper ol li:nth-child(2) {
+  color: #fff;
+}
+
+.abt-01 .heading-wrapper ol li i {
+  margin: 0 0.625rem;
+  color: #ddd;
+}

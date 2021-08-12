@@ -1,0 +1,190 @@
+.bg-0-b {
+  padding: 50px 0px;
+  position: relative;
+  background: #e8f0f5;
+  z-index: 2;
+}
+
+.bg-0-b .main-card-contact {
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 9;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact {
+  width: 40%;
+  max-width: 40%;
+  flex: 1 1 40%;
+}
+
+@media screen and (max-width: 767.98px) {
+  .bg-0-b .main-card-contact .sup-card-contact {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .contact-title {
+  position: relative;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .contact-title h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #222;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .contact-title h2::before {
+  position: absolute;
+  content: "";
+  background: #fd1b5b;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .contact-title ol li {
+  display: block;
+  padding: 10px 0px;
+  color: #606060;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .contact-title ol li i {
+  color: #fd1b5b;
+  padding-right: 15px;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .head-content {
+  position: relative;
+  display: block;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .head-content h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #222;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .head-content h2::before {
+  position: absolute;
+  content: "";
+  background: #fd1b5b;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .head-content p {
+  font-size: 16px;
+  line-height: 27px;
+  display: block;
+  padding: 20px 0px;
+  margin: 0px;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact-0a {
+  width: 60%;
+  max-width: 60%;
+  flex: 1 1 60%;
+}
+
+@media screen and (max-width: 767.98px) {
+  .bg-0-b .main-card-contact .sup-card-contact-0a {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .ca-ool {
+  padding: 0px 10px;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group {
+  width: 50%;
+  max-width: 50%;
+  flex: 1 1 50%;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup {
+  margin: 10px;
+  position: relative;
+}
+
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-sup
+  .cal-01 {
+  position: relative;
+}
+
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup i {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 45px;
+  width: 45px;
+  background: #fd1b5b;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-sup
+  label {
+  font-size: 15px;
+  color: #6e6e6e;
+}
+
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-sup
+  label
+  span {
+  position: relative;
+  top: 4px;
+  left: 5px;
+  color: #fd1b5b;
+}
+
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-control {
+  padding: 10px 15px;
+  margin: 30px 0px;
+  height: 45px;
+  position: relative;
+}

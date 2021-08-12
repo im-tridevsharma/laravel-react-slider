@@ -1,0 +1,102 @@
+/* ================================ Slider CSS =============================== */
+.slider {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.slider .carousel-inner {
+  height: 600px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .slider .carousel-inner {
+    height: 100%;
+  }
+}
+
+.slider .carousel-inner .carousel-item::before {
+  position: absolute;
+  content: "";
+  background: rgba(3, 7, 53, 0.6);
+  height: 100%;
+  width: 100%;
+}
+
+.slider .carousel-inner .carousel-item .carousel-caption {
+  bottom: 57%;
+  display: block;
+  transition: ease-in 0.5s;
+}
+
+@media screen and (max-width: 1280px) {
+  .slider .carousel-inner .carousel-item .carousel-caption {
+    bottom: 35%;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .slider .carousel-inner .carousel-item .carousel-caption {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .slider .carousel-inner .carousel-item .carousel-caption {
+    top: 20%;
+  }
+}
+
+.slider .carousel-inner .carousel-item .carousel-caption h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  display: inline-block;
+}
+
+.slider .carousel-inner .carousel-item .carousel-caption p {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  margin: 10px 0px;
+  color: #fff;
+  display: block;
+  font-weight: 100;
+  line-height: 35px;
+}
+
+.slider .carousel-inner .carousel-item .carousel-caption .button-01 {
+  display: inline-block;
+  margin: 20px 0px;
+  text-align: center;
+  position: relative;
+}
+
+.slider .carousel-inner .carousel-item .carousel-caption .button-01 ul li {
+  display: inline-block;
+  padding: 8px 10px;
+  border: solid 1px #fff;
+}
+
+.slider
+  .carousel-inner
+  .carousel-item
+  .carousel-caption
+  .button-01
+  ul
+  li:nth-child(1) {
+  margin-right: 20px;
+  background: #fd1b5b;
+  border: 1px solid #fd1b5b;
+  color: #fff;
+}
+
+.slider .carousel-inner .carousel-item .carousel-caption .button-01 ul li a {
+  font-size: 0.9rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}

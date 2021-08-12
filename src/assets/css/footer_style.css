@@ -1,0 +1,96 @@
+/* ================================ Footer CSS =============================== */
+footer {
+  position: relative;
+  padding: 50px 0px 0px;
+  background: #fafafa;
+}
+
+@media screen and (max-width: 767.98px) {
+  footer {
+    padding: 20px 0 0;
+  }
+}
+
+footer .copy-right {
+  padding: 20px 0px;
+  border-top: solid 1px #dfdfdf;
+  font-size: 14px;
+  color: #84878a;
+  text-align: center;
+}
+
+footer .copy-right p a {
+  color: #fd1b5b;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+footer .footer-content {
+  margin: 20px 0px;
+  display: block;
+  width: 100%;
+  color: #84878a;
+}
+
+footer .footer-content p {
+  font-size: 16px;
+  padding: 10px 0px;
+  line-height: 27px;
+  margin: 0px;
+}
+
+footer .footer-content ul li {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background: #fd1b5b;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 5px 3px 0px 0px;
+}
+
+footer .footer-content ol li {
+  padding: 10px 0px;
+  position: relative;
+}
+
+footer .footer-content ol li a {
+  color: #84878a;
+  font-size: 16px;
+}
+
+footer .footer-content ol li a i {
+  padding-right: 10px;
+  color: #fd1b5b;
+}
+
+footer .footer-content h2 {
+  font-size: 20px;
+  position: relative;
+  padding: 5px 0px;
+  font-weight: 600;
+}
+
+footer .footer-content .form-group {
+  position: relative;
+}
+
+footer .footer-content .form-group .form-control {
+  height: 40px;
+  padding-right: 40px;
+  text-overflow: ellipsis;
+}
+
+footer .footer-content .form-group i {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #fd1b5b;
+  text-align: center;
+  top: 0;
+  right: 0;
+}
