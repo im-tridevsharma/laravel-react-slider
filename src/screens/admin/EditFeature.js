@@ -5,7 +5,7 @@ import AdminHeader from "../../components/AdminHeader";
 import "../../assets/css/add_slider.css";
 import { useHistory } from "react-router-dom";
 
-export default function EditSlider({ match }) {
+export default function EditFeature({ match }) {
   const [id, setId] = useState(0);
   const [image, setImage] = useState();
   const [oldImage, setOldImage] = useState("");
@@ -20,7 +20,7 @@ export default function EditSlider({ match }) {
   useEffect(
     function () {
       const id = match.params.id;
-      fetch(`http://localhost:8000/api/sliders/${id}`)
+      fetch(`http://localhost:8000/api/features/${id}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.status === "success") {
@@ -50,7 +50,7 @@ export default function EditSlider({ match }) {
     formdata.append("description", description);
     formdata.append("id", id);
 
-    fetch(`http://localhost:8000/api/sliders/${id}`, {
+    fetch(`http://localhost:8000/api/features/${id}`, {
       method: "POST",
       body: formdata,
     })
@@ -74,15 +74,15 @@ export default function EditSlider({ match }) {
           }
         }
         if (data.status === "success") {
-          alert("Slider updated successfully.");
+          alert("Feature updated successfully.");
           setTitle("");
           setDescription("");
           setImage("");
           setOldImage("");
           setTimeout(() => {
-            history.push("/admin/allSliders");
+            history.push("/admin/allFeatures");
           }, 100);
-          document.getElementById("sliderForm").reset();
+          document.getElementById("featureForm").reset();
         }
       })
       .catch((error) => console.log(error.message));
@@ -94,19 +94,19 @@ export default function EditSlider({ match }) {
       <div className="container p-3">
         <div className="card mt-5">
           <div className="card-header">
-            <h5>Update Slider</h5>
+            <h5>Update Feature</h5>
           </div>
           <div className="card-body">
             <form
               action=""
               method="POST"
-              id="sliderForm"
+              id="featureForm"
               onSubmit={handleSubmit}
               encType="multipart/form-data"
             >
               <input type="hidden" name="id" value={id} />
               <div className="form-group">
-                <label htmlFor="title">Slider Title</label>
+                <label htmlFor="title">Feature Title</label>
                 <input
                   type="text"
                   name="title"
@@ -118,7 +118,7 @@ export default function EditSlider({ match }) {
                 <p className="text-danger">{titleError}</p>
               </div>
               <div className="form-group">
-                <label htmlFor="description">Slider Description</label>
+                <label htmlFor="description">Feature Description</label>
                 <textarea
                   name="description"
                   id="description"
@@ -129,7 +129,7 @@ export default function EditSlider({ match }) {
                 <p className="text-danger">{descError}</p>
               </div>
               <div className="form-group">
-                <label htmlFor="image">Slider Image</label>
+                <label htmlFor="image">Feature Image</label>
                 <input
                   type="file"
                   name="image"

@@ -3,30 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Slider;
+use App\Models\Feature;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 
-class SliderController extends Controller
+class FeatureController extends Controller
 {
-    //getSliders
-    function getSliders($id = null){
+    //getFeatures
+    function getFeatures($id = null){
         if($id){
-            $data = Slider::find($id);
+            $data = Feature::find($id);
             if($data->exists()){
                 return response()->json(['status'=>'success','data'=>$data], 200);
             }else{
                 return $data;
             }
         }else{
-            return Slider::all();
+            return Feature::all();
         }
     }
 
-    //create new slider
-    function createSlider(Request $req){
+    //create new feature
+    function createFeature(Request $req){
         $rules = [
-            'title' => 'required|string|max:200|min:20',
+            'title' => 'required|string|max:200|min:10',
             'description' => 'required|string|max:300',
             'image' => 'required|mimes:jpg,jpeg,png'
         ];
@@ -36,20 +36,20 @@ class SliderController extends Controller
             return response()->json(["errors" => $validator->errors()],200);
         }
 
-        $slider = new Slider;
-        $slider->title = $req->title;
-        $slider->description = $req->description;
-        $slider->image = $req->image->store("sliders","public");
+        $feature = new Feature;
+        $feature->title = $req->title;
+        $feature->description = $req->description;
+        $feature->image = $req->image->store("features","public");
 
-        $data = $slider->save();
+        $data = $feature->save();
 
         return response()->json(["status" => "success", "data" => $data], 200);
     }
 
     //updateSlider
-    function updateSlider(Request $req){
+    function updateFeature(Request $req){
         $rules = [
-            'title' => 'required|string|max:200|min:20',
+            'title' => 'required|string|max:200|min:10',
             'description' => 'required|string|max:300'
         ];
         $validator = Validator::make($req->all(),$rules);
@@ -58,31 +58,31 @@ class SliderController extends Controller
             return response()->json(["errors" => $validator->errors()],200);
         }
 
-        $slider = Slider::find($req->id);
-        $slider->title = $req->title;
-        $slider->description = $req->description;
+        $feature = Feature::find($req->id);
+        $feature->title = $req->title;
+        $feature->description = $req->description;
 
         if($req->hasFile('image')){
-            $slider->image = $req->image->store("sliders","public");
+            $feature->image = $req->image->store("features","public");
         }
 
-        $data = $slider->save();
+        $data = $feature->save();
 
         return response()->json(["status" => "success", "data" => $data], 200);
     }
 
     //deleteSlider
-    function deleteSlider($id){
+    function deleteFeature($id){
         if(!empty($id)){
-            $slider = Slider::find($id);
-            if($slider->exists()){
-                if(file_exists(public_path('storage/'.$slider->image))){
-                    unlink(public_path('storage/'.$slider->image));
+            $feature = Feature::find($id);
+            if($feature->exists()){
+                if(file_exists(public_path('storage/'.$feature->image))){
+                    unlink(public_path('storage/'.$feature->image));
                 }
-                $slider->delete();
+                $feature->delete();
                 return response()->json(['status' => "success", "data" =>true],200);
             }else{
-                return response()->json(['errors' => "Slider not found."], 401);
+                return response()->json(['errors' => "Feature not found."], 401);
             }
         }else{
             return response()->json(['errors' => "Id is not provided."], 401);

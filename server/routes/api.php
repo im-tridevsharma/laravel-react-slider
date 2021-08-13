@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\FeatureController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,10 +15,13 @@ use App\Http\Controllers\SliderController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::get('sliders', [SliderController::class, 'getSliders']);
+Route::get('sliders/{id?}', [SliderController::class, 'getSliders']);
 Route::post('sliders', [SliderController::class, 'createSlider']);
+Route::post('sliders/{id}', [SliderController::class, 'updateSlider']);
 Route::delete('sliders/{id}', [SliderController::class, 'deleteSlider']);
+
+
+Route::get('features/{id?}', [FeatureController::class, 'getFeatures']);
+Route::post('features', [FeatureController::class, 'createFeature']);
+Route::post('features/{id}', [FeatureController::class, 'updateFeature']);
+Route::delete('features/{id}', [FeatureController::class, 'deleteFeature']);

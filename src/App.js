@@ -8,9 +8,12 @@ import Blog from "./screens/Blog";
 import Contact from "./screens/Contact";
 import Home from "./screens/Home";
 import AddSlider from "./screens/admin/AddSlider";
+import AddFeature from "./screens/admin/AddFeature";
 import Footer from "./components/Footer";
 import AllSliders from "./screens/admin/AllSliders";
 import EditSlider from "./screens/admin/EditSlider";
+import AllFeatures from "./screens/admin/AllFeatures";
+import EditFeature from "./screens/admin/EditFeature";
 
 function App() {
   const location = useLocation();
@@ -24,6 +27,10 @@ function App() {
         <Route path="/admin/addSlider" component={AddSlider} />
         <Route path="/admin/allSliders" component={AllSliders} />
         <Route path="/admin/editSlider/:id" component={EditSlider} />
+
+        <Route path="/admin/addFeature" component={AddFeature} />
+        <Route path="/admin/allFeatures" component={AllFeatures} />
+        <Route path="/admin/editFeature/:id" component={EditFeature} />
 
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/blog" component={Blog} />

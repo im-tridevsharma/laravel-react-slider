@@ -26,6 +26,7 @@ check .env file and set your mysql database credentials
 
 ```
 php artisan migrate
+php artisan storage:link
 ```
 
 ### step 5

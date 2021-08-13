@@ -23,12 +23,22 @@ export default function AdminHeader() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" to="/admin/addSlider">
-                Home
+                Add Slider
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/admin/allSliders">
                 All Sliders
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/admin/addFeature">
+                Add Feature
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/admin/allFeatures">
+                All Features
               </Link>
             </li>
           </ul>
